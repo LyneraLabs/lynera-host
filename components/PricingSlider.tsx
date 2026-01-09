@@ -2,6 +2,10 @@
 
 import { useState } from 'react';
 import { PricingTier } from '@/data/pricing';
+import { calculateSavingsPercentage } from '@/lib/utils';
+
+// Price scaling multiplier for slider adjustments
+const PRICE_SCALING_MULTIPLIER = 0.5;
 
 interface PricingSliderProps {
   tier: PricingTier;
@@ -21,7 +25,7 @@ export default function PricingSlider({ tier, billingCycle }: PricingSliderProps
     const basePrice = billingCycle === 'monthly' ? tier.priceMonthly : tier.priceYearly;
     
     // Calculate price based on slider position (linear scaling)
-    const priceMultiplier = 1 + (position * 0.5); // 50% increase at max
+    const priceMultiplier = 1 + (position * PRICE_SCALING_MULTIPLIER);
     return (basePrice * priceMultiplier).toFixed(2);
   };
 
@@ -61,7 +65,7 @@ export default function PricingSlider({ tier, billingCycle }: PricingSliderProps
         </div>
         {billingCycle === 'yearly' && (
           <p className="text-sm text-green-600 font-medium">
-            Save {((tier.priceMonthly * 12 - tier.priceYearly) / (tier.priceMonthly * 12) * 100).toFixed(0)}% with yearly billing
+            Save {calculateSavingsPercentage(tier.priceMonthly, tier.priceYearly)}% with yearly billing
           </p>
         )}
       </div>

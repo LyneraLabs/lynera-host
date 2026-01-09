@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PricingCard from '@/components/PricingCard';
 import { allServices } from '@/data/pricing';
+import { getServiceSlug } from '@/lib/utils';
 import Link from 'next/link';
 
 export default function Home() {
@@ -55,7 +56,7 @@ export default function Home() {
                       priceMonthly={tier.priceMonthly}
                       priceYearly={tier.priceYearly}
                       features={tier.features}
-                      serviceSlug={service.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}
+                      serviceSlug={getServiceSlug(service.name)}
                     />
                   ))}
                 </div>

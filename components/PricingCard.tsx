@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { calculateSavings } from '@/lib/utils';
 
 interface PricingCardProps {
   name: string;
@@ -22,7 +23,7 @@ export default function PricingCard({
         <span className="text-4xl font-bold text-blue-600">${priceMonthly}</span>
         <span className="text-gray-600">/month</span>
         <div className="text-sm text-gray-500 mt-1">
-          or ${priceYearly}/year (Save ${((priceMonthly * 12) - priceYearly).toFixed(2)})
+          or ${priceYearly}/year (Save ${calculateSavings(priceMonthly, priceYearly).toFixed(2)})
         </div>
       </div>
       <ul className="space-y-3 mb-6">
