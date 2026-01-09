@@ -18,8 +18,6 @@ async function loadPrices() {
                 periodElement.textContent = service.period;
             }
         });
-        
-        console.log('Prices loaded successfully:', prices);
     } catch (error) {
         console.error('Error loading prices:', error);
         // Fallback: show placeholder text if loading fails
@@ -32,4 +30,12 @@ async function loadPrices() {
 }
 
 // Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', loadPrices);
+document.addEventListener('DOMContentLoaded', () => {
+    loadPrices();
+    
+    // Set dynamic copyright year
+    const yearElement = document.getElementById('year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});
