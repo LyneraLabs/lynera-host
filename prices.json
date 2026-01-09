@@ -1,0 +1,22 @@
+{
+  "vps": {
+    "name": "VPS Hosting",
+    "price": "$9.99",
+    "period": "month"
+  },
+  "cpanel": {
+    "name": "CPanel Hosting",
+    "price": "$5.99",
+    "period": "month"
+  },
+  "minecraft": {
+    "name": "Minecraft Hosting",
+    "price": "$7.99",
+    "period": "month"
+  },
+  "bot": {
+    "name": "Bot Hosting (Discord)",
+    "price": "$4.99",
+    "period": "month"
+  }
+}
