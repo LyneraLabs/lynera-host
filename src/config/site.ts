@@ -17,6 +17,10 @@ export const siteConfig = {
       href: '/pricing',
     },
     {
+      title: 'Dashboard',
+      href: '/dashboard',
+    },
+    {
       title: 'About',
       href: '/about',
     },
@@ -27,6 +31,7 @@ export const siteConfig = {
       items: [
         { title: 'Pricing', href: '/pricing' },
         { title: 'Order', href: '/order' },
+        { title: 'Dashboard', href: '/dashboard' },
       ],
     },
     {
