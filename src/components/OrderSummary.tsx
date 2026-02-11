@@ -12,7 +12,7 @@ export function OrderSummary({ selectedPlan, selectedAddons }: OrderSummaryProps
   const total = calculateTotal(selectedPlan, selectedAddons)
 
   return (
-    <Card className="sticky top-24">
+    <Card>
       <h3 className="text-xl font-bold text-secondary mb-4">Order Summary</h3>
       
       {!selectedPlan ? (

@@ -149,7 +149,7 @@ function OrderPageContent() {
         </div>
 
         {/* Order Summary Sidebar */}
-        <div>
+        <div className="lg:sticky lg:top-24 self-start">
           <OrderSummary selectedPlan={selectedPlan} selectedAddons={selectedAddons} />
           {selectedPlan && (
             <Button
