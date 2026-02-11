@@ -9,6 +9,7 @@ A production-ready Next.js starter project for hosting Minecraft servers with St
 - 🎨 **Modern Design** - Clean UI with brand colors (#e2adf2, #654597)
 - ⚙️ **Configuration-Driven** - All content managed through TypeScript config files
 - 💳 **Stripe-Ready** - Pre-built checkout flow structure for subscriptions
+- 📊 **Client Dashboard** - Integrated Stripe customer portal for account management
 - 🧩 **Smart Add-ons System** - Compatibility rules and automatic validation
 - 📱 **Fully Responsive** - Mobile-first design with Tailwind CSS
 - 🚀 **Vercel Optimized** - Zero-config deployment with serverless functions
@@ -45,6 +46,7 @@ lynera-host/
 │   │   ├── pricing/        # Pricing plans
 │   │   ├── about/          # About us
 │   │   ├── order/          # Order configuration
+│   │   ├── dashboard/      # Client dashboard
 │   │   └── api/            # API routes
 │   ├── components/         # Reusable React components
 │   ├── config/             # Business configuration (EDIT THESE!)
@@ -52,6 +54,7 @@ lynera-host/
 │   │   ├── addons.ts      # Add-ons catalog
 │   │   ├── hardware.ts    # Hardware specs
 │   │   ├── about.ts       # About content
+│   │   ├── dashboard.ts   # Dashboard settings
 │   │   └── site.ts        # Site settings
 │   ├── lib/               # Utility functions
 │   └── types/             # TypeScript definitions
@@ -81,6 +84,18 @@ Interactive order builder with:
 - Add-on selection with compatibility validation
 - Live order summary with monthly total
 - Stripe checkout integration (placeholder)
+
+### Dashboard Page
+![Dashboard Page](https://github.com/user-attachments/assets/c8e7fa6e-cf69-484e-9e63-d16cef588d77)
+
+Comprehensive client dashboard with:
+- Account overview with subscription count and monthly total
+- Active subscriptions management
+- Payment methods display
+- Invoice history with PDF downloads
+- Stripe Customer Portal integration for billing management
+
+Full guide: [documentation/dashboard.md](./documentation/dashboard.md)
 
 ## 🛠️ Customization
 
